@@ -1,0 +1,150 @@
+<header>
+    <div class="logo-box">
+        <div class="crown">👑</div>
+        <div class="logo-text">
+            <span class="rk">RK</span> <span class="ent">ENTERPRISES</span>
+            <div class="tagline">Printer Sales & Solutions</div>
+        </div>
+    </div>
+    <p>📞 9229220770 | 9827166462</p>
+</header>
+
+<style>
+body{font-family:Arial;background:#f4f6f8;margin:0}
+header{background:#0a7cff;color:#fff;padding:15px;text-align:center}
+section{padding:20px}
+h2{background:#ffe600;padding:8px}
+table{width:100%;border-collapse:collapse;margin-bottom:25px}
+th,td{border:1px solid #ccc;padding:6px;font-size:14px;text-align:center}
+th{background:#ffd000}
+.add-btn{background:#28a745;color:#fff;border:none;padding:6px 10px;cursor:pointer}
+.add-btn:hover{opacity:.85}
+.cart{position:fixed;right:10px;bottom:10px;background:#fff;border:2px solid #0a7cff;width:320px;box-shadow:0 0 10px rgba(0,0,0,.3)}
+.cart h3{margin:0;background:#0a7cff;color:#fff;padding:6px;font-size:16px}
+.cart-items{padding:6px;max-height:200px;overflow:auto;font-size:13px}
+.cart-footer{padding:6px}
+.order-btn{background:#25D366;color:#fff;border:none;padding:8px;width:100%;cursor:pointer}
+.clear-btn{background:#dc3545;color:#fff;border:none;padding:6px;width:100%;margin-top:5px}
+footer{background:#222;color:#fff;text-align:center;padding:10px}
+</style>
+
+<script>
+let cart=[];
+function addToCart(model,price){
+ cart.push({model,price});
+ showCart();
+}
+function showCart(){
+ let html="",total=0;
+ cart.forEach((i,n)=>{html+=(n+1)+". "+i.model+" - ₹"+i.price+"<br>";total+=parseInt(i.price)});
+ document.getElementById("items").innerHTML=html;
+ document.getElementById("total").innerText=total;
+}
+function orderNow(){
+ if(cart.length==0){alert("Cart is empty");return;}
+ let msg="🧾 RK Enterprises Order%0A%0A";
+ let total=0;
+ cart.forEach((i,n)=>{msg+=(n+1)+". "+i.model+" - ₹"+i.price+"%0A";total+=parseInt(i.price)});
+ msg+="%0A💰 Total: ₹"+total;
+ window.open("https://wa.me/919229220770?text="+msg,"_blank");
+ window.open("https://wa.me/919827166462?text="+msg,"_blank");
+}
+function clearCart(){cart=[];showCart();}
+</script>
+</head>
+
+<body>
+
+<header>
+<h1>RK ENTERPRISES</h1>
+<p>Printer Sales & Solutions | Raipur</p>
+<p>📞 9229220770 | 9827166462</p>
+</header>
+
+<section>
+
+<h2>COLOR PRINTERS</h2>
+<table>
+<tr><th>Model</th><th>Size</th><th>Warranty</th><th>DP ₹</th><th>Add</th></tr>
+
+<tr><td>L130</td><td>A4</td><td>1Y / 15K</td><td>8862</td><td><button class="add-btn" onclick="addToCart('L130','8862')">Add</button></td></tr>
+<tr><td>L11050</td><td>A3+</td><td>1Y / 50K</td><td>29075</td><td><button class="add-btn" onclick="addToCart('L11050','29075')">Add</button></td></tr>
+<tr><td>L14150</td><td>A3+</td><td>1Y / 1L</td><td>36380</td><td><button class="add-btn" onclick="addToCart('L14150','36380')">Add</button></td></tr>
+<tr><td>L15150</td><td>A3+</td><td>1Y / 2L</td><td>70410</td><td><button class="add-btn" onclick="addToCart('L15150','70410')">Add</button></td></tr>
+<tr><td>L15160</td><td>A3+</td><td>1Y / 2L</td><td>78057</td><td><button class="add-btn" onclick="addToCart('L15160','78057')">Add</button></td></tr>
+<tr><td>L15180</td><td>A3+</td><td>3Y / 2L</td><td>93550</td><td><button class="add-btn" onclick="addToCart('L15180','93550')">Add</button></td></tr>
+<tr><td>L3210 / 15 / 16</td><td>A4</td><td>1Y</td><td>10900</td><td><button class="add-btn" onclick="addToCart('L3210 / 15 / 16','10900')">Add</button></td></tr>
+<tr><td>L3250 / 56</td><td>A4</td><td>1Y</td><td>13500</td><td><button class="add-btn" onclick="addToCart('L3250 / 56','13500')">Add</button></td></tr>
+<tr><td>L3260</td><td>A4</td><td>1Y</td><td>15000</td><td><button class="add-btn" onclick="addToCart('L3260','15000')">Add</button></td></tr>
+<tr><td>L3560</td><td>A4</td><td>2Y</td><td>15500</td><td><button class="add-btn" onclick="addToCart('L3560','15500')">Add</button></td></tr>
+<tr><td>L5290</td><td>A4</td><td>1Y</td><td>19977</td><td><button class="add-btn" onclick="addToCart('L5290','19977')">Add</button></td></tr>
+<tr><td>L6360</td><td>A4</td><td>1Y</td><td>22314</td><td><button class="add-btn" onclick="addToCart('L6360','22314')">Add</button></td></tr>
+<tr><td>L6370</td><td>A4</td><td>1Y</td><td>24155</td><td><button class="add-btn" onclick="addToCart('L6370','24155')">Add</button></td></tr>
+<tr><td>L6390</td><td>A4</td><td>1Y</td><td>26255</td><td><button class="add-btn" onclick="addToCart('L6390','26255')">Add</button></td></tr>
+<tr><td>L6460</td><td>A4</td><td>1Y</td><td>24402</td><td><button class="add-btn" onclick="addToCart('L6460','24402')">Add</button></td></tr>
+<tr><td>L6570</td><td>A4</td><td>1Y</td><td>61183</td><td><button class="add-btn" onclick="addToCart('L6570','61183')">Add</button></td></tr>
+<tr><td>L6580</td><td>A4</td><td>1Y</td><td>64983</td><td><button class="add-btn" onclick="addToCart('L6580','64983')">Add</button></td></tr>
+<tr><td>PM-520</td><td>Photo</td><td>1Y</td><td>14691</td><td><button class="add-btn" onclick="addToCart('PM-520','14691')">Add</button></td></tr>
+</table>
+
+<h2>MONO PRINTERS</h2>
+<table>
+<tr><th>Model</th><th>Size</th><th>Warranty</th><th>DP ₹</th><th>Add</th></tr>
+
+<tr><td>M1050</td><td>A4</td><td>1Y</td><td>11458</td><td><button class="add-btn" onclick="addToCart('M1050','11458')">Add</button></td></tr>
+<tr><td>M2050</td><td>A4</td><td>1Y</td><td>15623</td><td><button class="add-btn" onclick="addToCart('M2050','15623')">Add</button></td></tr>
+<tr><td>M1100</td><td>A4</td><td>3Y</td><td>10738</td><td><button class="add-btn" onclick="addToCart('M1100','10738')">Add</button></td></tr>
+<tr><td>M1120</td><td>A4</td><td>3Y</td><td>11658</td><td><button class="add-btn" onclick="addToCart('M1120','11658')">Add</button></td></tr>
+<tr><td>M1140</td><td>A4</td><td>3Y</td><td>15458</td><td><button class="add-btn" onclick="addToCart('M1140','15458')">Add</button></td></tr>
+<tr><td>M1170</td><td>A4</td><td>3Y</td><td>16839</td><td><button class="add-btn" onclick="addToCart('M1170','16839')">Add</button></td></tr>
+<tr><td>M1180</td><td>A4</td><td>3Y</td><td>18349</td><td><button class="add-btn" onclick="addToCart('M1180','18349')">Add</button></td></tr>
+<tr><td>M2110</td><td>A4</td><td>3Y</td><td>15517</td><td><button class="add-btn" onclick="addToCart('M2110','15517')">Add</button></td></tr>
+<tr><td>M2120</td><td>A4</td><td>3Y</td><td>15517</td><td><button class="add-btn" onclick="addToCart('M2120','15517')">Add</button></td></tr>
+<tr><td>M2140</td><td>A4</td><td>3Y</td><td>17370</td><td><button class="add-btn" onclick="addToCart('M2140','17370')">Add</button></td></tr>
+<tr><td>M2170</td><td>A4</td><td>3Y</td><td>19789</td><td><button class="add-btn" onclick="addToCart('M2170','19789')">Add</button></td></tr>
+<tr><td>M3140</td><td>A4</td><td>3Y</td><td>22727</td><td><button class="add-btn" onclick="addToCart('M3140','22727')">Add</button></td></tr>
+<tr><td>M3170</td><td>A4</td><td>3Y</td><td>23965</td><td><button class="add-btn" onclick="addToCart('M3170','23965')">Add</button></td></tr>
+<tr><td>M3180</td><td>A4</td><td>3Y</td><td>25984</td><td><button class="add-btn" onclick="addToCart('M3180','25984')">Add</button></td></tr>
+<tr><td>M15140</td><td>A3+</td><td>1Y</td><td>52852</td><td><button class="add-btn" onclick="addToCart('M15140','52852')">Add</button></td></tr>
+<tr><td>M15180</td><td>A3+</td><td>1Y</td><td>67390</td><td><button class="add-btn" onclick="addToCart('M15180','67390')">Add</button></td></tr>
+</table>
+
+</section>
+
+<h2>Customer Details</h2>
+
+<div class="customer-form">
+    <label>Customer Name *</label>
+    <input type="text" id="custName" placeholder="Enter customer name" required>
+
+    <label>Firm Name (Optional)</label>
+    <input type="text" id="firmName" placeholder="Enter firm name">
+
+    <label>Address *</label>
+    <textarea id="custAddress" placeholder="Enter full address" required></textarea>
+
+    <label>Mobile Number *</label>
+    <input type="tel" id="mobile" placeholder="Enter mobile number" required>
+
+    <label>Telephone Number (Optional)</label>
+    <input type="tel" id="telephone" placeholder="Enter telephone number">
+</div>
+`
+<div class="cart">
+<h3>🛒 Cart</h3>
+<div class="cart-items" id="items"></div>
+<div class="cart-footer">
+<b>Total: ₹<span id="total">0</span></b>
+<button class="order-btn" onclick="orderNow()">Order on WhatsApp</button>
+<button class="clear-btn" onclick="clearCart()">Clear Cart</button>
+</div>
+</div>
+
+<footer>
+<p>📧 rkraipur@gmail.com</p>
+<p>© RK Enterprises</p>
+</footer>
+
+</body>
+</html>
+
